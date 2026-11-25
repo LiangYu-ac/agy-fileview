@@ -1,0 +1,17 @@
+{
+  "name": "agy-fileview",
+  "version": "1.0.0",
+  "description": "Enhanced file explorer side panel MCP App plugin for Google Antigravity",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node test/server.test.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.7.5",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "esbuild": "^0.28.2",
+    "zod": "^3.25.76"
+  }
+}

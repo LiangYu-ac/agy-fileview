@@ -1,0 +1,27 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "agy-fileview",
+  "displayName": "FileView Explorer",
+  "version": "1.0.0",
+  "description": "Enhanced file explorer side panel for Antigravity with right-click reveal in file manager, open with default app, open terminal, copy path, rename, duplicate, safe delete, and chat context attachment.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Open FileView side panel for the current workspace",
+    "在资源管理器中定位当前项目的 README 文件",
+    "Browse project files and attach key source files to chat context"
+  ],
+  "author": {
+    "name": "LiangYu",
+    "url": "https://github.com/LiangYu-ac"
+  },
+  "homepage": "https://github.com/LiangYu-ac/agy-fileview",
+  "repository": "https://github.com/LiangYu-ac/agy-fileview",
+  "license": "MIT",
+  "keywords": [
+    "file-explorer",
+    "file-manager",
+    "context-menu",
+    "mcp-app",
+    "reveal-in-explorer"
+  ]
+}

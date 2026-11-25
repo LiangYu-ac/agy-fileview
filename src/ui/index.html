@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FileView Explorer</title>
+  <style>/* __INLINE_CSS__ */</style>
+</head>
+<body>
+  <div id="app" class="fv-root">
+    <!-- Top Bar: Workspace / Location Selector + Toolbar Actions -->
+    <header class="fv-header">
+      <div class="fv-project-wrap">
+        <select id="location-select" class="fv-select" aria-label="Workspace or location"></select>
+      </div>
+      <div class="fv-toolbar" role="toolbar" aria-label="Explorer actions">
+        <button id="btn-new-file" class="fv-icon-btn" type="button"></button>
+        <button id="btn-new-folder" class="fv-icon-btn" type="button"></button>
+        <button id="btn-reveal-root" class="fv-icon-btn" type="button"></button>
+        <button id="btn-terminal-root" class="fv-icon-btn" type="button"></button>
+        <button id="btn-toggle-hidden" class="fv-icon-btn" type="button"></button>
+        <button id="btn-sort" class="fv-icon-btn" type="button"></button>
+        <button id="btn-lang" class="fv-text-btn" type="button"></button>
+        <button id="btn-refresh" class="fv-icon-btn" type="button"></button>
+      </div>
+    </header>
+
+    <!-- Breadcrumb & Path Bar -->
+    <div class="fv-nav-bar">
+      <button id="btn-up" class="fv-icon-btn fv-icon-btn-sm" type="button"></button>
+      <div id="breadcrumbs" class="fv-breadcrumbs" role="navigation"></div>
+      <button id="btn-copy-cwd" class="fv-icon-btn fv-icon-btn-sm" type="button"></button>
+      <button id="btn-jump-path" class="fv-icon-btn fv-icon-btn-sm" type="button"></button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="fv-search-bar">
+      <div class="fv-search-input-wrap">
+        <span id="search-icon-slot" class="fv-search-icon"></span>
+        <input id="search-input" class="fv-search-input" type="text" autocomplete="off" spellcheck="false" />
+        <button id="btn-search-clear" class="fv-clear-btn hidden" type="button" aria-label="Clear">×</button>
+      </div>
+      <button id="btn-search-mode" class="fv-pill-btn" type="button"></button>
+    </div>
+
+    <!-- Clipboard Banner (shown when files are copied or cut) -->
+    <div id="clipboard-banner" class="fv-clipboard-banner hidden">
+      <span id="clipboard-text" class="fv-clipboard-text"></span>
+      <div class="fv-clipboard-actions">
+        <button id="btn-banner-paste" class="fv-mini-btn fv-mini-btn-primary" type="button"></button>
+        <button id="btn-banner-clear" class="fv-mini-btn" type="button"></button>
+      </div>
+    </div>
+
+    <!-- Main Tree / Search Results Container -->
+    <main id="tree-container" class="fv-tree-container" tabindex="0" role="tree"></main>
+
+    <!-- Status Bar -->
+    <footer id="status-bar" class="fv-status-bar">
+      <span id="status-left" class="fv-status-text"></span>
+      <span id="status-right" class="fv-status-hint"></span>
+    </footer>
+
+    <!-- Custom Right-Click Context Menu -->
+    <div id="context-menu" class="fv-context-menu hidden" role="menu"></div>
+
+    <!-- Modal Overlay -->
+    <div id="modal-backdrop" class="fv-modal-backdrop hidden" role="dialog" aria-modal="true">
+      <div id="modal-card" class="fv-modal-card"></div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fv-toast hidden" role="status" aria-live="polite"></div>
+  </div>
+
+  <script>/* __INLINE_JS__ */</script>
+</body>
+</html>
