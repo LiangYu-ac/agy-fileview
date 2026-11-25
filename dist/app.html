@@ -66,7 +66,10 @@ html, body {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   min-height: 260px;
+  overflow: hidden;
   background: var(--fv-bg);
   color: var(--fv-text);
   user-select: none;
@@ -75,21 +78,28 @@ html, body {
 /* Header */
 .fv-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 6px;
+  row-gap: 4px;
   padding: 6px 8px;
+  width: 100%;
+  min-width: 0;
   border-bottom: 1px solid var(--fv-border);
   background: var(--fv-bg-2);
   flex-shrink: 0;
 }
 
 .fv-project-wrap {
-  flex: 1 1 auto;
-  min-width: 90px;
+  flex: 1 1 110px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .fv-select {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   height: 26px;
   padding: 0 8px;
   border: 1px solid var(--fv-border-2);
@@ -99,6 +109,7 @@ html, body {
   font-family: var(--fv-font);
   font-size: 12px;
   font-weight: 500;
+  text-overflow: ellipsis;
   outline: none;
   cursor: pointer;
 }
@@ -162,6 +173,8 @@ html, body {
   display: flex;
   align-items: center;
   gap: 4px;
+  width: 100%;
+  min-width: 0;
   padding: 4px 8px;
   border-bottom: 1px solid var(--fv-border);
   background: var(--fv-bg);
@@ -216,6 +229,8 @@ html, body {
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 100%;
+  min-width: 0;
   padding: 5px 8px;
   border-bottom: 1px solid var(--fv-border);
   background: var(--fv-bg);
@@ -351,6 +366,8 @@ html, body {
 /* Tree Container */
 .fv-tree-container {
   flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -476,6 +493,8 @@ html, body {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  width: 100%;
+  min-width: 0;
   height: 24px;
   padding: 0 10px;
   border-top: 1px solid var(--fv-border);

@@ -6,7 +6,7 @@
 </div>
 
 <div align="center">
-  <img src="assets/preview.png" alt="FileView 预览图" width="320" />
+  <img src="assets/preview.png" alt="FileView 文件管理器右键菜单预览" width="440" />
 </div>
 
 ---

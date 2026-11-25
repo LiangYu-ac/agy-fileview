@@ -6,7 +6,7 @@
 </div>
 
 <div align="center">
-  <img src="assets/preview.png" alt="FileView Preview" width="320" />
+  <img src="assets/preview.png" alt="FileView Explorer Right-Click Context Menu" width="440" />
 </div>
 
 ---
